@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ProcessPage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Elevator">
+   <children>
+      <Rectangle fx:id="InputOterBox" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff40" height="283.0" layoutX="325.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+      <TextField fx:id="DestinationFloor" layoutX="377.0" layoutY="132.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86909978" height="103.0" layoutX="71.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="81.0" />
+      <Rectangle fx:id="BoxNumberFloor" arcHeight="5.0" arcWidth="5.0" fill="#e1f5477b" height="26.0" layoutX="86.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Text fx:id="TextNumberOfFloor" layoutX="108.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <TextField fx:id="StartFloor" layoutX="377.0" layoutY="65.0" />
+      <Button layoutX="391.0" layoutY="242.0" mnemonicParsing="false" onAction="#ButtonSubmit" onMouseClicked="#SubmitAction" text="Submit" />
+      <Label fx:id="TextEnterFloor" layoutX="412.0" layoutY="39.0" text="Enter The Floor" />
+      <Label fx:id="TextEnterDFloor" layoutX="391.0" layoutY="108.0" text="Enter Destination Floor" />
+      <Button fx:id="ButtonStart" layoutX="465.0" layoutY="242.0" mnemonicParsing="false" onAction="#ButtonStart" onMouseClicked="#ButtonStartAction" text="Start" />
+      <TextField fx:id="InputArrival" layoutX="378.0" layoutY="194.0" />
+      <Label fx:id="TextArrival" layoutX="396.0" layoutY="173.0" prefWidth="97.0" text="Enter Arrival Time" />
+      <TableView fx:id="TableResult" layoutX="15.0" layoutY="185.0" prefHeight="176.0" prefWidth="282.0">
+        <columns>
+          <TableColumn fx:id="TableFirstColumn" text=" " />
+          <TableColumn fx:id="TableSecondColumn" prefWidth="50.0" text="FCFS" />
+           <TableColumn fx:id="TableThirdColumn" prefWidth="50" text="SJF" />
+           <TableColumn fx:id="TableFourthColumn" prefWidth="50" text="RR" />
+           <TableColumn fx:id="TableFifthColumn" prefWidth="50.0" text="SRTF" />
+        </columns>
+      </TableView>
+      <Label fx:id="TextWaiting" layoutX="347.0" layoutY="319.0" text="Waiting Time : " />
+      <Label fx:id="TextResponse" layoutX="346.0" layoutY="343.0" text="Response Time : " />
+      <Label fx:id="TextTurn" layoutX="347.0" layoutY="365.0" text="Turn Around Time : " />
+      <Text fx:id="ValWait" layoutX="498.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text fx:id="ValRes" layoutX="498.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text fx:id="ValTurn" layoutX="498.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Line fx:id="LineShape" endX="-0.5" endY="-51.0000114440918" layoutX="112.0" layoutY="112.0" startX="-0.5" startY="51.99998474121094" />
+   </children>
+</AnchorPane>
